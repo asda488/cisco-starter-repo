@@ -1,25 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import { Children } from 'react';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Exhibit>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </Exhibit>
     </div>
   );
+}
+
+function Header(){
+  return <div className="Header"><h1>Cisco Sextant</h1></div>;
+}
+
+function Card({title = "Title", content = "Lorem Ipsum"}){
+  return (
+  <div className="Card">
+    <h2 className="Content">{title}</h2>
+    <p className="Content">{content}</p>
+    </div>
+  );
+}
+
+function Exhibit(props){
+  return <div className="Exhibit">{props.children}</div>
+
 }
 
 export default App;

@@ -1,5 +1,11 @@
+body {
+  background-color: #006e90;
+}
+
 .App {
   text-align: center;
+  color: #F18F01;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 .App-logo {
@@ -35,4 +41,28 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Header {
+  background-color: #41BBD9;
+  border-radius: 50px;
+}
+
+.Card {
+  background-color: #ADCAD6;
+  border-radius: 75px;
+  width: 25%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-color: #99C24D;
+}
+
+.Content {
+  flex: 1;
+}
+
+.Exhibit {
+  display: flex;
 }
